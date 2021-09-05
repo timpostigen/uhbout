@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( -39.8628, -36.978 )
+scale = Vector2( 1.00532, 1 )
+color = Color( 0.0156863, 0.588235, 0.0509804, 1 )
+polygon = PoolVector2Array( 34.9016, 28.3983, 37.3086, 27.179, 40.2517, 26.9688, 43.6459, 27.4943, 45.9461, 29.1761, 47.7146, 30.8579, 49.3964, 34.3266, 49.2919, 36.8493, 48.9782, 40.2129, 48.4504, 41.6845, 47.3053, 43.5765, 46.2598, 44.9429, 44.2732, 45.9941, 42.0386, 46.6247, 39.5159, 46.9401, 37.2034, 46.6247, 34.7859, 46.2043, 31.8427, 43.4714, 30.4763, 40.8436, 29.6354, 37.3749, 30.1609, 34.0113, 32.1581, 30.4375 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
