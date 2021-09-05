@@ -1,22 +1,23 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Main.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 511.894, 10 )
+extents = Vector2( 512, 10 )
 
 [node name="World" type="Node2D"]
+script = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 512, 320 )
+position = Vector2( 513.876, 0 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Ground" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-modulate = Color( 0.223529, 0.14902, 0.0117647, 1 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 position = Vector2( 512, 592 )
 shape = SubResource( 1 )
 
-[node name="Polygon2D" type="Polygon2D" parent="Area2D"]
+[node name="Polygon2D" type="Polygon2D" parent="Ground"]
 color = Color( 0.243137, 0.184314, 0.0156863, 1 )
 polygon = PoolVector2Array( 0, 584, 1024, 584, 1024, 600, 0, 600 )
